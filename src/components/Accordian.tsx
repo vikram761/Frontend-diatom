@@ -27,7 +27,7 @@ export default function Accordian() {
   })
   return (
     <div className={cn("2xl:px-80 lg:px-28  md:px-24 px-6 pt-16 w-full ", openSans.className)}>
-      <h1 className="lg:text-3xl text-2xl font-medium max-w-4xl lg:leading-10 ">We are DiAtom Technologies, breathing life into healthcare through pioneering ventilators and revolutionary 3D printing that redefines regenerative medicine&apos;s possibilities.</h1>
+      <h1 className="lg:text-3xl text-2xl font-medium max-w-4xl lg:leading-10">We are DiAtom Technologies, breathing life into healthcare through pioneering ventilators and revolutionary 3D printing that redefines regenerative medicine&apos;s possibilities.</h1>
       <div className="w-full pt-24 pb-12 flex gap-8">
         <div className="w-1/2 flex items-center justify-start z-10 max-lg:hidden">
           {showImage.image1 && <Lottie animationData={instrument} loop={true} className=" w-full " rendererSettings={{ preserveAspectRatio: "xMidYMid slice" }} />}
