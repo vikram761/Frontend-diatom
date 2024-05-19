@@ -4,7 +4,7 @@ import Lottie from "lottie-react";
 import { Open_Sans } from "next/font/google";
 import { Suspense } from "react";
 import Loading from "../assets/loading.json"
-import VideoBG from "./VideoBG";
+import VideoBG from "@/components/VideoBG";
 
 
 const openSans = Open_Sans({
@@ -20,9 +20,9 @@ const Hero = () => {
           <Lottie animationData={Loading} loop={true} />
         </div>
       }>
-        <VideoBG />
+        <VideoBG src="/bg/background.mp4"/>
       </Suspense>
-      <div className="2xl:px-80 lg:px-28  md:px-24 px-8 h-full py-20 flex items-end max-lg:items-center ">
+      <div className="padding-x h-full py-20 flex items-end max-lg:items-center ">
         <h2 className="lg:text-7xl md:text-6xl text-4xl text-white font-semibold lg:max-w-4xl ">Applying the power of Science and Technology</h2>
       </div>
     </div>

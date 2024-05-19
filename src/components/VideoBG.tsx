@@ -1,5 +1,5 @@
 
-export default function VideoBG() {
+export default function VideoBG({src}:{src :string}) {
   return (
     <video
       autoPlay
@@ -7,7 +7,7 @@ export default function VideoBG() {
       muted
       className="w-full h-full object-cover absolute -z-40"
     >
-      <source src="/bg/background2.mp4" type="video/mp4" />
+      <source src={src} type="video/mp4" />
     </video>
 
   )

@@ -59,7 +59,7 @@ const features: Feature[] = [
 
 const Features = () => {
   return (
-    <div className={cn("2xl:px-80 lg:px-28  md:px-24 px-6 py-12", openSans.className)}>
+    <div className={cn("padding-x py-12", openSans.className)}>
       <h2 className="text-3xl pt-10 pb-24 font-medium">Revolutionizing Healthcare, Embracing Life</h2>
       <div className="w-full grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1  gap-8">
         {features.map((feature: Feature) => {
@@ -67,7 +67,7 @@ const Features = () => {
             <div className=" w-full flex flex-col gap-4 group/feature" key={feature.id}>
               <feature.icon className="w-16 h-16 mb-4 group-hover/feature:text-teal-800 duration-200 delay-100 transition-colors" />
               <h4 className="text-2xl font-medium group-hover/feature:text-teal-600 duration-200 delay-100 transition-colors">{feature.heading}</h4>
-              <p>{feature.context}</p>
+              <p className="monts font-normal">{feature.context}</p>
               <Link href={feature.href} className="mt-4 group/link flex gap-2 items-center" >
                 <span className="text-teal-600 font-medium group-hover/link:text-teal-500 duration-150 delay-150 transition-colors">{feature.linkText}</span>
                 <span className="text-teal-600 group-hover/link:translate-x-2 group-hover/link:text-teal-500 transition-all duration-200 delay-100 font-bold">→</span>

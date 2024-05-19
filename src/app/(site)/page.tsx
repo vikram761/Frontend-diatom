@@ -1,6 +1,7 @@
-import Accordian from "@/components/Accordian";
-import Features from "@/components/Features";
-import Hero from "@/components/Hero";
+import Accordian from "@/pages/Accordian";
+import Blog from "@/pages/Blog";
+import Features from "@/pages/Features";
+import Hero from "@/pages/Hero";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero />
       <Accordian/>
       <Features/> 
+      <Blog />
     </>
   );
 }
