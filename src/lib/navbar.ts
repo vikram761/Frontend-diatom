@@ -25,6 +25,12 @@ export const AboutData: AboutDataType[] = [
     links: [
       { name: "Sustainability", href: "/about/sustainability" }
     ]
+  },
+  {
+    heading: "Know more about us",
+    links :[
+      {name : "Blog" , href : "/blog"}
+    ]
   }
 ]
 

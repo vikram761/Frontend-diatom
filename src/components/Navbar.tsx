@@ -23,15 +23,16 @@ const fadeInVariants = {
 const Navbar = () => {
   const [showAbout, setShowAbout] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  const router = useRouter();
   const pathname = usePathname();
 
   return (
-    <nav className={openSans.className}>
-      <div className={cn("2xl:px-80 lg:px-28  md:px-24 px-6 z-30  md:pt-8  pt-4 w-full bg-gray-100 flex justify-between  relative", isOpen ? "pb-4" : "md:pb-8 pb-4")} >
-        <div className="flex items-center gap-4 z-30 cursor-pointer" onClick={() => router.push("/")}>
-          <img src="/logo.png" alt="logo" className="lg:w-14 w-12 h-auto" />
-        </div>
+    <nav className={cn("",openSans.className)} onClick={() => {
+      if(showAbout) setShowAbout(false);
+    }}>
+      <div className={cn("lg:shadow-md padding-x  z-30 py-6 w-full bg-gray-100 flex justify-between  relative")} >
+        <Link className="flex items-center gap-4 z-30 cursor-pointer" href="/">
+          <img src="/logo.png" alt="logo" className=" w-12 h-auto" />
+        </Link>
         <div className="flex gap-12 items-center text-sm  max-lg:hidden" >
           {navLinks.map((item) => {
             return (
