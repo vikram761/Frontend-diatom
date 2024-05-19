@@ -31,7 +31,7 @@ export default function Home (){
   return (
     <section
       className={cn(
-        "w-full relative  lg:py-28 md:py-20 py-10 2xl:px-40 lg:px-20 sm:px-10 px-4 flex max-lg:flex-col justify-between items-center gap-4",
+        "w-full relative  2xl:px-40 lg:px-20 sm:px-10 px-4 lg:h-screen flex max-lg:flex-col justify-between items-center gap-4",
         open_sans.className,
       )}
     >
