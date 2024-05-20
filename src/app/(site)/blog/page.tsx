@@ -4,20 +4,20 @@ import Link from "next/link";
 export default function Home() {
   return (
     <>
-      <section className="w-full  lg:pt-20 lg:pb-12 pt-10 pb-6 flex flex-col">
-        <h1 className="padding-x md:text-7xl text-4xl monts lg:mb-10 mb-6 font-medium">
+      <section className="w-full padding-x lg:pt-20 lg:pb-12 pt-10 pb-6 flex flex-col">
+        <h1 className="md:text-7xl text-4xl monts lg:mb-10 mb-6 font-medium">
           The Blog...
         </h1>
         {BlogData.map((blog) => {
           return (
             <Link
               href={blog.href}
-              className="w-full padding-x flex flex-col justify-start md:gap-6 gap-2  md:py-8 py-4 group"
+              className="w-full  flex flex-col justify-start md:gap-6 gap-2  md:py-8 py-4 group"
               key={blog.id}
             >
               <div className="flex w-full lg:gap-16 gap-2 ">
                 <div className="md:grow flex flex-col w-full gap-4">
-                  <div className="flex gap-3 items-center">
+                  <div className="flex md:gap-3 gap-2 items-end">
                     <img
                       src={blog.authorImg}
                       alt="logo"
@@ -29,7 +29,7 @@ export default function Home() {
                   <h1 className="lg:text-xl md:text-lg text-md font-bold open-sans  ">
                     {blog.title}
                   </h1>
-                  <p className="text-md monts max-md:hidden">
+                  <p className="flex-none text-md monts max-md:hidden">
                     {blog.description}
                   </p>
                   <div className="flex gap-2 flex-wrap ">
@@ -41,11 +41,11 @@ export default function Home() {
                     </p>
                   </div>
                 </div>
-                <div className="md:flex-none flex items-center overflow-hidden ">
+                <div className="md:flex-none flex items-center overflow-hidden  justify-center">
                   <img
                     src={blog.blogImg}
                     alt="blogbg"
-                    className="max-h-60 lg:min-w-52 md:min-w-32  min-w-24 transition duration-300 ease-in-out group-hover:scale-125"
+                    className="max-h-60 lg:min-w-52 md:min-w-28  max-w-40 object-center transition duration-300 ease-in-out group-hover:scale-125"
                   />
                 </div>
               </div>
