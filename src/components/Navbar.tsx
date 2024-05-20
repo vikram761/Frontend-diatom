@@ -34,7 +34,7 @@ const Navbar = () => {
     >
       <div
         className={cn(
-          "lg:shadow-md padding-x  z-30 py-6 w-full bg-gray-100 flex justify-between  relative",
+          "lg:shadow-md padding-x bg-white z-30 py-6 w-full flex justify-between  relative",
         )}
       >
         <Link className="flex items-center gap-4 z-30 cursor-pointer" href="/">

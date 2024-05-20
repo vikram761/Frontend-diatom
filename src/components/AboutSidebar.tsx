@@ -21,7 +21,7 @@ const AboutSidebar : FC<AboutSidebar> = ({showAbout}) =>{
             initial="hidden"
             animate="visible"
             exit="hidden"
-            transition={{ duration: 0.5, ease: 'easeInOut' }} className="2xl:px-80 lg:px-32  md:px-24 px-6 z-20 w-full absolute py-16 bg-gray-100 flex max-lg:hidden">
+            transition={{ duration: 0.5, ease: 'easeInOut' }} className="2xl:px-80 lg:px-32  md:px-24 px-6 z-20 w-full absolute py-16 bg-white flex max-lg:hidden">
             {AboutData.map(data => {
               return (
                 <div className="w-1/3 min-w-2xl" key={data.heading}>
