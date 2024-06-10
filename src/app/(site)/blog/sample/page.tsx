@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { IoMdArrowDown } from "react-icons/io";
 
 const data = [
   {
@@ -6,12 +7,6 @@ const data = [
     heading: "",
     content: `
     As Diatom Technologies, a pioneering company in the field of bioprinting and ventilator development, we are committed to pushing the boundaries of respiratory care. The future of ventilator technology holds immense potential for improving patient outcomes and enhancing the efficiency of healthcare delivery.
-    `,
-  },
-  {
-    id: 2,
-    heading: "AI and Machine Learning for Intelligent Ventilation",
-    content: `
     One of the most promising advancements is the integration of artificial intelligence (AI) and machine learning algorithms into ventilator systems. These cutting-edge technologies will enable real-time monitoring and adjustment of ventilator settings, tailoring the treatment to each patient's unique respiratory needs. By continuously analyzing vital signs and respiratory patterns, AI-powered ventilators can optimize oxygen delivery and reduce the risk of complications.
     `,
   },
@@ -40,29 +35,24 @@ const data = [
 
 export default function Home() {
   return (
-    <div className="2xl:px-[31rem]  lg:px-72  md:px-28 px-6 py-20 w-full ">
+    <div className="padding-x py-20 w-full ">
       <h1 className="md:text-5xl text-4xl font-bold open-sans md:leading-[4rem] ">
         The Future of Respiratory Care: Advancements in Ventilator Technology
       </h1>
-      <div className="flex py-8 gap-4 items-center">
-        <img src="/author.jpeg" alt="author" className="w-10 rounded-full" />
-        <div className="flex flex-col ">
-          <h2 className="text-lg text-gray-800">John doe</h2>
-          <div className="flex gap-4 items-center">
-            <p className="text-sm text-gray-500">4 min read</p>
-            <p className="text-sm text-gray-600">May 20,2024</p>
-          </div>
-        </div>
-      </div>
-      <hr />
-      <div className="w-full max-h-[50vh] overflow-hidden flex items-center">
+      <div className="w-full my-8 max-h-[600px] overflow-hidden flex items-center">
         <img
           src="/bg/blogbg2.jpg"
           alt="blog background"
           className="object-cover object-center"
         />
       </div>
-      <div className=" py-10 flex-col flex gap-10">
+      <div className="flex gap-4 items-center">
+        <img src="/author.jpeg" alt="author" className="w-8 rounded-full" />
+        <p className="text-md font-semibold ">John Doe</p>
+        <p className="font-semibold text-md">7 Min Read</p>
+      </div>
+
+      <div className=" pt-6 pb-10 max-w-6xl flex-col flex gap-10">
         {data.map((ele) => {
           return (
             <div className="w-full flex flex-col gap-6" key={ele.id}>
@@ -74,29 +64,107 @@ export default function Home() {
           );
         })}
       </div>
-      <h3 className="text-4xl open-sans mt-6 font-semibold">
-        Related Blog article
+      <h3 className="text-4xl monts my-4 font-semibold">
+        Related Blog articles
       </h3>
-      <Link href="/blog/sample" className="flex max-md:flex-col max-md:items-center mt-12 gap-6 group">
-        <div className=" md:min-w-40 md:max-w-60 w-full overflow-hidden">
-          <img
-            src="/bg/blog.jpg"
-            alt="blog bg"
-            className="object-cover w-full max-h-96 group-hover:scale-110 duration-200 delay-100 transition-all ease-out"
-          />
-        </div>
-        <div >
-          <h3 className="open-sans sm:text-2xl text-xl font-semibold">
-            Unlocking the Potential of Regenerative Medicine: The Power of
-            Biological 3D Printing
-          </h3>
-          <div className="flex gap-4 mt-4">
-            <p className="text-gray-500 text-sm">Mary cross</p>
-            <p className="text-gray-700 text-sm">10 min read</p>
-            <p className="text-sm text-gray-900">19 May,2024</p>
+      <div className="w-full grid lg:grid-cols-3 grid-cols-1 gap-8">
+        <Link
+          href="/blog/sample"
+          className="flex-col flex relative gap-1 group py-4"
+        >
+          <div className="overflow-hidden">
+            <img
+              src="/bg/blog.jpg"
+              alt="blog"
+              className="max-w-full transition duration-300 ease-in-out hover:scale-110"
+            />
           </div>
-        </div>
-      </Link>
+          <div className="w-full mt-8 relative">
+            <p className="font-semibold text-sm inline monts">john doe</p>
+            <p className="font-bold text-xl inline mx-1 ">.</p>
+            <p className="font-semibold inline text-sm monts">20 May 2024</p>
+          </div>
+          <div className="flex justify-between monts ">
+            <h3 className="text-xl font-semibold ">Migrating to Linear 101</h3>
+            <div className="-rotate-90 ">
+              <IoMdArrowDown className="-rotate-45 text-xl group-hover:text-2xl transition-all delay-100 duration-200" />
+            </div>
+          </div>
+          <p className="mt-1 ">
+            At vero eos et accusamus et iusto odio dignissimos ducimus qui
+            blanditiis praesentium voluptatum.
+          </p>
+          <div className="monts font-semibold mt-1">
+            <p className="text-[10px] border-[1.7px] rounded-xl inline px-2 py-1  border-black">
+              Technology
+            </p>
+          </div>
+        </Link>
+        <Link
+          href="/blog/sample"
+          className="flex-col flex relative gap-1 group py-4"
+        >
+          <div className="overflow-hidden">
+            <img
+              src="/bg/blog.jpg"
+              alt="blog"
+              className="max-w-full transition duration-300 ease-in-out hover:scale-110"
+            />
+          </div>
+          <div className="w-full mt-8 relative">
+            <p className="font-semibold text-sm inline monts">john doe</p>
+            <p className="font-bold text-xl inline mx-1 ">.</p>
+            <p className="font-semibold inline text-sm monts">20 May 2024</p>
+          </div>
+          <div className="flex justify-between monts ">
+            <h3 className="text-xl font-semibold ">Migrating to Linear 101</h3>
+            <div className="-rotate-90 ">
+              <IoMdArrowDown className="-rotate-45 text-xl group-hover:text-2xl transition-all delay-100 duration-200" />
+            </div>
+          </div>
+          <p className="mt-1 ">
+            At vero eos et accusamus et iusto odio dignissimos ducimus qui
+            blanditiis praesentium voluptatum.
+          </p>
+          <div className="monts font-semibold mt-1">
+            <p className="text-[10px] border-[1.7px] rounded-xl inline px-2 py-1  border-black">
+              Technology
+            </p>
+          </div>
+        </Link>
+        <Link
+          href="/blog/sample"
+          className="flex-col flex relative gap-1 group py-4"
+        >
+          <div className="overflow-hidden">
+            <img
+              src="/bg/blog.jpg"
+              alt="blog"
+              className="max-w-full transition duration-300 ease-in-out hover:scale-110"
+            />
+          </div>
+          <div className="w-full mt-8 relative">
+            <p className="font-semibold text-sm inline monts">john doe</p>
+            <p className="font-bold text-xl inline mx-1 ">.</p>
+            <p className="font-semibold inline text-sm monts">20 May 2024</p>
+          </div>
+          <div className="flex justify-between monts ">
+            <h3 className="text-xl font-semibold ">Migrating to Linear 101</h3>
+            <div className="-rotate-90 ">
+              <IoMdArrowDown className="-rotate-45 text-xl group-hover:text-2xl transition-all delay-100 duration-200" />
+            </div>
+          </div>
+          <p className="mt-1 ">
+            At vero eos et accusamus et iusto odio dignissimos ducimus qui
+            blanditiis praesentium voluptatum.
+          </p>
+          <div className="monts font-semibold mt-1">
+            <p className="text-[10px] border-[1.7px] rounded-xl inline px-2 py-1  border-black">
+              Technology
+            </p>
+          </div>
+        </Link>
+      </div>
     </div>
   );
 }

@@ -38,7 +38,7 @@ const Navbar = () => {
         )}
       >
         <Link className="flex items-center gap-4 z-30 cursor-pointer" href="/">
-          <img src="/logo.png" alt="logo" className=" w-12 h-auto" />
+          <img src="/logo.png" alt="logo" className=" w-10 h-auto" />
         </Link>
         <div className="flex gap-12 items-center text-sm  max-lg:hidden">
           {navLinks.map((item) => {

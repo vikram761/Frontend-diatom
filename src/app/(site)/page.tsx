@@ -9,8 +9,8 @@ export default function Home() {
     <>
       <Hero />
       <Accordian/>
-      <Features/> 
       <Products />
+      <Features/> 
       <Blog />
     </>
   );
