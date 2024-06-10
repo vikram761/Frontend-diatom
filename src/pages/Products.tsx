@@ -9,6 +9,7 @@ const Products = () => {
       <div className="w-full md:pt-20 pt-8 flex justify-evenly  gap-4 z-10 flex-wrap">
         <Product name="Ventilator" price={4999} link="/" imageSrc="/ventilator.jpg" />
         <Product name="Bioprinters" price={3999} link="/" imageSrc="/bg/blogbg2.jpg" />
+        <Product name="Ventilator" price={4999} link="/" imageSrc="/ventilator.jpg" />
       </div>
     </section>
   );

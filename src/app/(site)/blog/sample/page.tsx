@@ -1,5 +1,5 @@
-import Link from "next/link";
-import { IoMdArrowDown } from "react-icons/io";
+import BlogCard from "@/components/BlogCard";
+import { BlogData } from "@/lib/blog";
 
 const data = [
   {
@@ -26,7 +26,7 @@ const data = [
   },
   {
     id: 5,
-    heading: "Diatom Technologies' Commitment to Innovation",
+    heading: "Diatom Technologies Commitment to Innovation",
     content: `
     At Diatom Technologies, we are at the forefront of these innovations, combining our expertise in bioprinting and ventilator technology to create cutting-edge solutions. Our goal is to empower healthcare professionals with the tools they need to deliver exceptional respiratory care, ultimately improving patient outcomes and enhancing overall well-being.
     `,
@@ -35,7 +35,7 @@ const data = [
 
 export default function Home() {
   return (
-    <div className="padding-x py-20 w-full ">
+    <div className="padding-x lg:pt-20 py-10 w-full ">
       <h1 className="md:text-5xl text-4xl font-bold open-sans md:leading-[4rem] ">
         The Future of Respiratory Care: Advancements in Ventilator Technology
       </h1>
@@ -64,106 +64,13 @@ export default function Home() {
           );
         })}
       </div>
-      <h3 className="text-4xl monts my-4 font-semibold">
+      <h3 className="text-4xl monts mt-4 mb-8 font-semibold">
         Related Blog articles
       </h3>
-      <div className="w-full grid lg:grid-cols-3 grid-cols-1 gap-8">
-        <Link
-          href="/blog/sample"
-          className="flex-col flex relative gap-1 group py-4"
-        >
-          <div className="overflow-hidden">
-            <img
-              src="/bg/blog.jpg"
-              alt="blog"
-              className="max-w-full transition duration-300 ease-in-out hover:scale-110"
-            />
-          </div>
-          <div className="w-full mt-8 relative">
-            <p className="font-semibold text-sm inline monts">john doe</p>
-            <p className="font-bold text-xl inline mx-1 ">.</p>
-            <p className="font-semibold inline text-sm monts">20 May 2024</p>
-          </div>
-          <div className="flex justify-between monts ">
-            <h3 className="text-xl font-semibold ">Migrating to Linear 101</h3>
-            <div className="-rotate-90 ">
-              <IoMdArrowDown className="-rotate-45 text-xl group-hover:text-2xl transition-all delay-100 duration-200" />
-            </div>
-          </div>
-          <p className="mt-1 ">
-            At vero eos et accusamus et iusto odio dignissimos ducimus qui
-            blanditiis praesentium voluptatum.
-          </p>
-          <div className="monts font-semibold mt-1">
-            <p className="text-[10px] border-[1.7px] rounded-xl inline px-2 py-1  border-black">
-              Technology
-            </p>
-          </div>
-        </Link>
-        <Link
-          href="/blog/sample"
-          className="flex-col flex relative gap-1 group py-4"
-        >
-          <div className="overflow-hidden">
-            <img
-              src="/bg/blog.jpg"
-              alt="blog"
-              className="max-w-full transition duration-300 ease-in-out hover:scale-110"
-            />
-          </div>
-          <div className="w-full mt-8 relative">
-            <p className="font-semibold text-sm inline monts">john doe</p>
-            <p className="font-bold text-xl inline mx-1 ">.</p>
-            <p className="font-semibold inline text-sm monts">20 May 2024</p>
-          </div>
-          <div className="flex justify-between monts ">
-            <h3 className="text-xl font-semibold ">Migrating to Linear 101</h3>
-            <div className="-rotate-90 ">
-              <IoMdArrowDown className="-rotate-45 text-xl group-hover:text-2xl transition-all delay-100 duration-200" />
-            </div>
-          </div>
-          <p className="mt-1 ">
-            At vero eos et accusamus et iusto odio dignissimos ducimus qui
-            blanditiis praesentium voluptatum.
-          </p>
-          <div className="monts font-semibold mt-1">
-            <p className="text-[10px] border-[1.7px] rounded-xl inline px-2 py-1  border-black">
-              Technology
-            </p>
-          </div>
-        </Link>
-        <Link
-          href="/blog/sample"
-          className="flex-col flex relative gap-1 group py-4"
-        >
-          <div className="overflow-hidden">
-            <img
-              src="/bg/blog.jpg"
-              alt="blog"
-              className="max-w-full transition duration-300 ease-in-out hover:scale-110"
-            />
-          </div>
-          <div className="w-full mt-8 relative">
-            <p className="font-semibold text-sm inline monts">john doe</p>
-            <p className="font-bold text-xl inline mx-1 ">.</p>
-            <p className="font-semibold inline text-sm monts">20 May 2024</p>
-          </div>
-          <div className="flex justify-between monts ">
-            <h3 className="text-xl font-semibold ">Migrating to Linear 101</h3>
-            <div className="-rotate-90 ">
-              <IoMdArrowDown className="-rotate-45 text-xl group-hover:text-2xl transition-all delay-100 duration-200" />
-            </div>
-          </div>
-          <p className="mt-1 ">
-            At vero eos et accusamus et iusto odio dignissimos ducimus qui
-            blanditiis praesentium voluptatum.
-          </p>
-          <div className="monts font-semibold mt-1">
-            <p className="text-[10px] border-[1.7px] rounded-xl inline px-2 py-1  border-black">
-              Technology
-            </p>
-          </div>
-        </Link>
+      <div className="w-full grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 justify-center">
+        {BlogData.map((blog) => {
+          return <BlogCard blog={blog} key={blog.id} />;
+        })}
       </div>
     </div>
   );

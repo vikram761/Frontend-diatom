@@ -1,4 +1,4 @@
-interface blog {
+export interface blog {
   id : number;
   author : string;
   authorImg : string;
@@ -18,12 +18,10 @@ export const BlogData : blog[] = [
     authorImg: "/author.jpeg",
     blogImg: "/bg/blogbg2.jpg",
     href: "/blog/sample",
-    date: "May 18,2024",
-    title: "The Future of Respiratory Care: Advancements in Ventilator Technology",
+    date: "20 May 2024",
+    title: "The Future of Respiratory Care",
     description: `cumque nihil impedit quo minus id quod maxime placeat facere
-                possimus, omnis voluptas assumenda est, omnis dolor repellendus.
-                Temporibus autem quibusdam et aut officiis debitis aut rerum
-                necessitatibus saepe eveniet ut et voluptates repudiandae sint
+                possimus, omnis voluptas assumenda est.
               `,
     tag: "Technology",
     time: 8,
@@ -34,12 +32,10 @@ export const BlogData : blog[] = [
     authorImg: "/author.jpeg",
     blogImg: "/bg/blog.jpg",
     href: "/blog/sample",
-    date: "Jan 10,2024",
-    title: "Unlocking the Potential of Regenerative Medicine: The Power of Biological 3D Printing",
+    date: "20 May 2024",
+    title: "Unlocking the Potential of Regenerative Medicine",
     description: `cumque nihil impedit quo minus id quod maxime placeat facere
-                possimus, omnis voluptas assumenda est, omnis dolor repellendus.
-                Temporibus autem quibusdam et aut officiis debitis aut rerum
-                necessitatibus saepe eveniet ut et voluptates repudiandae sint
+                possimus, omnis voluptas assumenda est.
               `,
     tag: "Technology",
     time: 12,
@@ -50,12 +46,10 @@ export const BlogData : blog[] = [
     authorImg: "/author.jpeg",
     blogImg: "/bg/blogbg3.jpg",
     href: "/blog/sample",
-    date: "Jan 10,2024",
+    date: "20 May 2024",
     title: "Bridging the Gap: Collaborative Efforts in Healthcare Innovation",
     description: `cumque nihil impedit quo minus id quod maxime placeat facere
-                possimus, omnis voluptas assumenda est, omnis dolor repellendus.
-                Temporibus autem quibusdam et aut officiis debitis aut rerum
-                necessitatibus saepe eveniet ut et voluptates repudiandae sint
+                possimus, omnis voluptas assumenda est.
               `,
     tag: "Technology",
     time: 10,

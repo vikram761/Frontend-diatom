@@ -1,7 +1,6 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { Open_Sans } from "next/font/google";
 import Link from "next/link";
 import { useState } from "react";
 import AboutSidebar from "./AboutSidebar";
@@ -9,10 +8,6 @@ import { usePathname } from "next/navigation";
 import MobileSidebar from "./MobileSidebar";
 import { cn } from "@/lib/utils";
 import { navLinks } from "@/lib/navbar";
-
-const openSans = Open_Sans({
-  subsets: ["latin"],
-});
 
 const fadeInVariants = {
   hidden: { opacity: 0 },
@@ -27,17 +22,16 @@ const Navbar = () => {
 
   return (
     <nav
-      className={cn("", openSans.className)}
       onClick={() => {
         if (showAbout) setShowAbout(false);
       }}
     >
       <div
         className={cn(
-          "lg:shadow-md padding-x bg-white z-30 py-6 w-full flex justify-between  relative",
+          "lg:shadow-md padding-x bg-white z-30 py-6 w-full flex justify-between  relative open-sans",
         )}
       >
-        <Link className="flex items-center gap-4 z-30 cursor-pointer" href="/">
+        <Link href="/" className="flex items-center gap-4 z-30 cursor-pointer">
           <img src="/logo.png" alt="logo" className=" w-10 h-auto" />
         </Link>
         <div className="flex gap-12 items-center text-sm  max-lg:hidden">
