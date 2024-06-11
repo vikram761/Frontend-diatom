@@ -65,7 +65,7 @@ const Features = () => {
         {features.map((feature: Feature) => {
           return (
             <div className=" w-full flex flex-col gap-4 group/feature" key={feature.id}>
-              <feature.icon className="w-16 h-16 mb-4 group-hover/feature:text-teal-800 duration-200 delay-100 transition-colors" />
+              <feature.icon className="w-16 h-16 mb-4  duration-200 delay-100 transition-colors" />
               <h4 className="text-2xl font-medium group-hover/feature:text-teal-600 duration-200 delay-100 transition-colors">{feature.heading}</h4>
               <p className="monts font-normal">{feature.context}</p>
               <Link href={feature.href} className="mt-4 group/link flex gap-2 items-center" >

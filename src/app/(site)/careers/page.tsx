@@ -5,9 +5,7 @@ import career from "@/assets/career.json";
 import Link from "next/link";
 import Career from "@/components/Career";
 import { careerData, internships, jobs, training } from "@/lib/career";
-
-
-
+import { useEffect } from "react";
 
 export default function Home() {
   return (
