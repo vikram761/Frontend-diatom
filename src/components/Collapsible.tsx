@@ -5,7 +5,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
-import { CollapsibleData, Image } from "@/pages/Accordian";
+import { CollapsibleData, Image } from "@/sections/Accordian";
 import { FC } from "react";
 
 

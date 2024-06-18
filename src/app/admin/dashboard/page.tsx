@@ -1,9 +1,7 @@
 "use client";
 import { Card } from "@/components/ui/card";
-import { Validate } from "@/lib/auth";
 import { cn } from "@/lib/utils";
-import { useRouter } from "next/navigation";
-import { FC, useEffect } from "react";
+import { FC } from "react";
 import { IconType } from "react-icons";
 import { BsImage, BsArrowRightShort } from "react-icons/bs";
 import { FaRegUser } from "react-icons/fa6";

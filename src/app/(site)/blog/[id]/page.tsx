@@ -1,7 +1,7 @@
 import { blog as BlogType, calulateTime } from "@/lib/blog";
 import Markdown from "react-markdown";
-import Blog from "@/pages/Blog";
 import { notFound } from "next/navigation";
+import Blog from "@/sections/Blog";
 
 const fetchData = async (id: string) => {
   try {

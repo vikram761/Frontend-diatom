@@ -9,7 +9,6 @@ import {
 } from "@/components/ui/table";
 import { useToast } from "@/components/ui/use-toast";
 import { blog as Blog, formatDate } from "@/lib/blog";
-import { Career } from "@/lib/career";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { FaRegTrashAlt } from "react-icons/fa";
