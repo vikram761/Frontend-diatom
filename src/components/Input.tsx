@@ -5,7 +5,7 @@ interface Input {
   placeholder: string;
   label: string;
   value: string | number;
-  setValue: React.Dispatch<React.SetStateAction<string>> | React.Dispatch<React.SetStateAction<number>>;
+  setValue: any; 
   className ?: string;
   type: string;
 }
