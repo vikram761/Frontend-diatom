@@ -94,18 +94,18 @@ export default function Home({ params }: { params: { id: string } }) {
           skills
         })
       })
-
       if(!res.ok){
         throw new Error("Upload failed");
       }
-      const responseData = await res.json();
 
+      const responseData = await res.json();
       toast({
         title: responseData.response,
       });
       router.push("/")
       setIsUploading(false);
     } catch (err) {
+      console.log(err)
       toast({
         variant: "destructive",
         title: "Failed to upload data",

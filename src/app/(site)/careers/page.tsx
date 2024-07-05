@@ -15,7 +15,7 @@ export default function Home() {
 
   const fetchData = async () => {
     try {
-      const res = await fetch("http://localhost:8080/career/");
+      const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/career/`);
       const data: { status: number; response: CareerType[] } = await res.json();
 
       const jobsData = data.response.filter((item) => item.worktype === "job");

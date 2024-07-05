@@ -51,6 +51,7 @@ export default function Home() {
         title: "user added successfully",
       });
       setIsUploading(false);
+      router.push("/admin/dashboard")
     } catch (err) {
       toast({
         variant: "destructive",
